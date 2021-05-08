@@ -90,20 +90,9 @@ class Holiday():
 
 import datetime
 import calendar
+# 祝休日のデータベースを作成する
 x = Holiday()
-print(x.HolidayJudge(datetime.date(2021,1,1)))
-# print(x.HolidayJudge(datetime.date(2021,1,11)))
-# print(x.HolidayJudge(datetime.date(2021,2,11)))
-# print(x.HolidayJudge(datetime.date(2021,2,23)))
-# print(x.HolidayJudge(datetime.date(2021,3,20)))
-# print(x.HolidayJudge(datetime.date(2021,4,29)))
-# print(x.HolidayJudge(datetime.date(2021,5,3)))
-# print(x.HolidayJudge(datetime.date(2021,5,4)))
-# print(x.HolidayJudge(datetime.date(2021,5,5)))
-# print(x.HolidayJudge(datetime.date(2021,7,22)))
-# print(x.HolidayJudge(datetime.date(2021,8,8)))
-# print(x.HolidayJudge(datetime.date(2021,8,9)))
-# print(x.HolidayJudge(datetime.date(2021,9,20)))
-# print(x.HolidayJudge(datetime.date(2021,9,23)))
-# print(x.HolidayJudge(datetime.date(2021,11,3)))
-# print(x.HolidayJudge(datetime.date(2021,11,23)))
+# 確認する日が祝日であるか、祝休日データベースと照合し休日であればTreを返す
+# 確認する日をkakuninhiに日付型で入れる
+kakuninhi = datetime.date(2021,7,22)
+print(x.HolidayJudge(kakuninhi))
