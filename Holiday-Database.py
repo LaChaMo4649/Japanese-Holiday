@@ -88,11 +88,13 @@ class Holiday():
             HoliHan = True
         return HoliHan
 
-import datetime
-import calendar
-# 祝休日のデータベースを作成する
-x = Holiday()
-# 確認する日が祝日であるか、祝休日データベースと照合し休日であればTreを返す
-# 確認する日をkakuninhiに日付型で入れる
-kakuninhi = datetime.date(2021,7,22)
-print(x.HolidayJudge(kakuninhi))
+if __name__ == '__main__':
+    import datetime
+    import calendar
+    
+    # 祝休日のデータベースを作成する
+    x = Holiday()
+    # 確認する日が祝日であるか、祝休日データベースと照合し休日であればTreを返す
+    # 確認する日をkakuninhiに日付型で入れる
+    kakuninhi = datetime.date(2021,7,22)
+    print(x.HolidayJudge(kakuninhi))
