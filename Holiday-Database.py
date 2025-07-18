@@ -1,7 +1,7 @@
+import datetime
+import calendar
 class Holiday():
     #祝日のデータベース作成、祝日判定
-    import datetime
-    import calendar
     def YoubiDay (self, HanteiBi, Youbi, ShuNum):
         #HanteiBi:判定日の年と月において、ShuNum:第何周かの番号で示されるYoubi:指定曜日の日にちを返す。　
         indexNum = calendar.day_name[:].index(Youbi) #Monday:0 〜 Sunday:6
@@ -88,22 +88,24 @@ class Holiday():
             HoliHan = True
         return HoliHan
 
-import datetime
-import calendar
-x = Holiday()
-print(x.HolidayJudge(datetime.date(2021,1,1)))
-# print(x.HolidayJudge(datetime.date(2021,1,11)))
-# print(x.HolidayJudge(datetime.date(2021,2,11)))
-# print(x.HolidayJudge(datetime.date(2021,2,23)))
-# print(x.HolidayJudge(datetime.date(2021,3,20)))
-# print(x.HolidayJudge(datetime.date(2021,4,29)))
-# print(x.HolidayJudge(datetime.date(2021,5,3)))
-# print(x.HolidayJudge(datetime.date(2021,5,4)))
-# print(x.HolidayJudge(datetime.date(2021,5,5)))
-# print(x.HolidayJudge(datetime.date(2021,7,22)))
-# print(x.HolidayJudge(datetime.date(2021,8,8)))
-# print(x.HolidayJudge(datetime.date(2021,8,9)))
-# print(x.HolidayJudge(datetime.date(2021,9,20)))
-# print(x.HolidayJudge(datetime.date(2021,9,23)))
-# print(x.HolidayJudge(datetime.date(2021,11,3)))
-# print(x.HolidayJudge(datetime.date(2021,11,23)))
+def main():
+    x = Holiday()
+    print(x.HolidayJudge(datetime.date(2021,1,1)))
+    # print(x.HolidayJudge(datetime.date(2021,1,11)))
+    # print(x.HolidayJudge(datetime.date(2021,2,11)))
+    # print(x.HolidayJudge(datetime.date(2021,2,23)))
+    # print(x.HolidayJudge(datetime.date(2021,3,20)))
+    # print(x.HolidayJudge(datetime.date(2021,4,29)))
+    # print(x.HolidayJudge(datetime.date(2021,5,3)))
+    # print(x.HolidayJudge(datetime.date(2021,5,4)))
+    # print(x.HolidayJudge(datetime.date(2021,5,5)))
+    # print(x.HolidayJudge(datetime.date(2021,7,22)))
+    # print(x.HolidayJudge(datetime.date(2021,8,8)))
+    # print(x.HolidayJudge(datetime.date(2021,8,9)))
+    # print(x.HolidayJudge(datetime.date(2021,9,20)))
+    # print(x.HolidayJudge(datetime.date(2021,9,23)))
+    # print(x.HolidayJudge(datetime.date(2021,11,3)))
+    # print(x.HolidayJudge(datetime.date(2021,11,23)))
+
+if __name__ == "__main__":
+    main()
