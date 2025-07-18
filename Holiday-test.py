@@ -1,7 +1,8 @@
+import datetime
+import calendar
+
 class Holiday():
     #入力日が、日本の祝日かどうかを判定し、祝日であればTrueを返す
-    import datetime
-    import calendar
     seijinhi = 11
     shunbunbi = 0
     uminohi = 20
@@ -73,20 +74,20 @@ class Holiday():
                     Result = True
             if HanteiBi.year == 2021:
                 if HanteiBi.day == self.sportnohi:
-                    Resuto = True
+                    Result = True
         if HanteiBi.month == 8:
             #8月11日（山の日）
             if HanteiBi.year == 2020:
                 yamanohi = 23
             if HanteiBi.year == 2021:
-                yamanohi = 8
+                yamanohi = 8 
             else:
-                yamahohi = 11
+                yamanohi = 11
             if HanteiBi.day == yamanohi:
                 Result = True
         if HanteiBi.month == 9:
             #秋分の日
-            self.shuubunhi = Int(23.2488 + 0.242194 * (HanteiBi.year - 1980)) - Int(HanteiBi.year - 1980) / 4)
+            self.shuubunhi = int(23.2488 + 0.242194 * (HanteiBi.year - 1980)) - int(HanteiBi.year - 1980) / 4
             if HanteiBi.day == self.shuubunhi:
                 Result = True
             #9月第３月曜日（敬老の日）
@@ -110,13 +111,15 @@ class Holiday():
         return Result
 
 
-import datetime
-import calendar
-#HanteiBi = datetime.datetime.strptime("2021/3/20", "%Y/%m/%d")
-HanteiBi = datetime.date(2021,7,19)
-x = Holiday()
-print(HanteiBi)
-print(x.holidayHanteiDay(HanteiBi))
+def main():
+    #HanteiBi = datetime.datetime.strptime("2021/3/20", "%Y/%m/%d")
+    HanteiBi = datetime.date(2021,7,19)
+    x = Holiday()
+    print(HanteiBi)
+    print(x.holidayHanteiDay(HanteiBi))
+
+if __name__ == "__main__":
+    main()
 
 # Public Function holidayHantei2(hanteiBi As Date, holiday1 As Boolean) As Boolean
 #     '国民の祝日に関する法律３条２項判定
